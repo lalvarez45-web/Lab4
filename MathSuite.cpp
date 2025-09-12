@@ -26,5 +26,29 @@ int main() {
         cout << "Q) Quit\n";
         cout << "Enter your choice: ";
         cin >> choice;
+
+        switch (choice) {
+            case '1': { // Addition
+                while (true) {
+                    int a = rand() % 50 + 1;
+                    int b = rand() % 50 + 1;
+                    int answer = a + b, userAnswer;
+
+                    cout << "What is " << a << " + " << b << "? (enter -999 to stop): ";
+                    cin >> userAnswer;
+
+                    if (userAnswer == -999) break;
+
+                    if (userAnswer == answer) {
+                        cout << "Correct!\n";
+                        correct++;
+                    } else {
+                        cout << "Wrong! Answer: " << answer << endl;
+                        wrong++;
+                    }
+                }
+                break;
+            }
+        }
     }
 }
