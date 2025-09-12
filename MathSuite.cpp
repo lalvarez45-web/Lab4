@@ -93,6 +93,28 @@ int main() {
                 }
                 break;
             }
+
+            case '4': { // Division
+                while (true) {
+                    int b = rand() % 12 + 1;
+                    int a = b * (rand() % 12 + 1); // divisible
+                    int answer = a / b, userAnswer;
+
+                    cout << "What is " << a << " / " << b << "? (enter -999 to stop): ";
+                    cin >> userAnswer;
+
+                    if (userAnswer == -999) break;
+
+                    if (userAnswer == answer) {
+                        cout << "Correct!\n";
+                        correct++;
+                    } else {
+                        cout << "Wrong! Answer: " << answer << endl;
+                        wrong++;
+                    }
+                }
+                break;
+            }
         }
     }
 }
