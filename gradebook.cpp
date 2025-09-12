@@ -106,6 +106,6 @@ int main() {
         outFile.close();
         cout << "Report saved to GradeReport.txt\n";
     }
-    
+
     return 0;
 }

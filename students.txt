@@ -1,0 +1,6 @@
+Student A
+90 85 88 92 -1
+Student B
+70 65 80 -1
+Student C
+55 60 50 -1
