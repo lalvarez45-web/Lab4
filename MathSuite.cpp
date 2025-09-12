@@ -115,6 +115,34 @@ int main() {
                 }
                 break;
             }
+
+            case '5': { // Statistics
+                int total = correct + wrong;
+                cout << "\n===== Statistics =====\n";
+                cout << setw(15) << left << "Correct:" << correct << endl;
+                cout << setw(15) << left << "Wrong:" << wrong << endl;
+                cout << setw(15) << left << "Total:" << total << endl;
+
+                // Save to file
+                outFile << "===== Session Results =====\n";
+                outFile << "Correct: " << correct << endl;
+                outFile << "Wrong  : " << wrong << endl;
+                outFile << "Total  : " << total << endl;
+                outFile << "===========================\n\n";
+                break;
+            }
+
+            case 'Q': case 'q': {
+                cout << "Exiting Math Practice App... Goodbye!\n";
+                running = false;
+                break;
+            }
+
+            default:
+                cout << "Invalid choice! Try again.\n";
         }
     }
+
+    outFile.close();
+    return 0;
 }
