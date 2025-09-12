@@ -1,33 +1,30 @@
 #include <iostream>
 #include <iomanip>
-#include <string>
 #include <cstdlib>
 #include <ctime>
+#include <fstream>
 using namespace std;
 
 int main() {
-    string playerName;
-    cout << "Welcome to !\n";
-    cout << "Enter your full name: ";
-    getline(cin, playerName);
-
-    int score = 0;
-    int rounds = 0;
-    bool quit = false;
-
-    int &outerScoreRef = score;
-
     srand(time(0));
 
-    while (!quit) {
-       
-        cout << "\n=== Console Arcade Menu ===\n";
-        cout << "1. Dice Duel\n";
-        cout << "2. Pattern Printer\n";
-        cout << "3. Show Scoreboard\n";
-        cout << "4. Quit\n";
-        cout << "Choose an option: ";
+    int correct = 0, wrong = 0;
+    char choice;
+    bool running = true;
 
-        
+    ofstream outFile("results.txt", ios::app); // Save results
+
+    cout << "===== Math Practice App =====" << endl;
+
+    while (running) {
+        cout << "\nMenu:\n";
+        cout << "1) Addition\n";
+        cout << "2) Subtraction\n";
+        cout << "3) Multiplication\n";
+        cout << "4) Division\n";
+        cout << "5) Statistics\n";
+        cout << "Q) Quit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
     }
 }
