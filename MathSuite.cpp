@@ -14,7 +14,7 @@ int main() {
 
     ofstream outFile("results.txt", ios::app); // Save results
 
-    cout << "===== Math Practice App =====" << endl;
+    cout << "===== Math Practice Suite =====" << endl;
 
     while (running) {
         cout << "\nMenu:\n";
