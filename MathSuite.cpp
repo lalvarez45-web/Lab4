@@ -12,7 +12,7 @@ int main() {
     char choice;
     bool running = true;
 
-    ofstream outFile("results.txt", ios::app); // Save results
+    ofstream outFile("results.txt", ios::app); // Save results - Adbullah
 
     cout << "===== Math Practice Suite =====" << endl;
 
@@ -28,7 +28,7 @@ int main() {
         cin >> choice;
 
         switch (choice) {
-            case '1': { // Addition
+            case '1': { // Addition - Luis
                 while (true) {
                     int a = rand() % 50 + 1;
                     int b = rand() % 50 + 1;
@@ -50,7 +50,7 @@ int main() {
                 break;
             }
 
-            case '2': { // Subtraction
+            case '2': { // Subtraction - Luis
                 while (true) {
                     int a = rand() % 50 + 1;
                     int b = rand() % 50 + 1;
@@ -72,7 +72,7 @@ int main() {
                 break;
             }
 
-            case '3': { // Multiplication
+            case '3': { // Multiplication - Abdullah
                 while (true) {
                     int a = rand() % 12 + 1;
                     int b = rand() % 12 + 1;
@@ -94,7 +94,7 @@ int main() {
                 break;
             }
 
-            case '4': { // Division
+            case '4': { // Division - Abdullah
                 while (true) {
                     int b = rand() % 12 + 1;
                     int a = b * (rand() % 12 + 1); // divisible
@@ -116,14 +116,14 @@ int main() {
                 break;
             }
 
-            case '5': { // Statistics
+            case '5': { // Statistics - Luis
                 int total = correct + wrong;
                 cout << "\n===== Statistics =====\n";
                 cout << setw(15) << left << "Correct:" << correct << endl;
                 cout << setw(15) << left << "Wrong:" << wrong << endl;
                 cout << setw(15) << left << "Total:" << total << endl;
 
-                // Save to file
+                // Save to file - Abdullah
                 outFile << "===== Session Results =====\n";
                 outFile << "Correct: " << correct << endl;
                 outFile << "Wrong  : " << wrong << endl;
